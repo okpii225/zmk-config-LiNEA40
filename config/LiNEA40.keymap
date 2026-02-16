@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,
+            //スクロール方向を逆転,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -192,10 +192,10 @@
 
         Macro {
             bindings = <
-&kp F2          &kp F4      &none    &none  &kp PRINTSCREEN                    &trans  &trans  &trans  &trans  &trans
-&Address        &none       &none    &none  &kp LC(LS(M))                      &trans  &trans  &trans  &trans  &trans
-&CtrlAltDelete  &RegNumber  &kp TAB  &Pass  &kp ENTER                          &trans  &trans  &trans  &trans  &trans
-&none           &none       &none    &none  &none            &trans    &trans  &trans          &trans  &trans  &trans
+&kp F2          &kp F4      &none    &none  &kp PRINTSCREEN                           &kp LC(PG_UP)  &none     &none     &none      &kp LC(PG_DN)
+&Address        &none       &none    &none  &kp LC(LS(M))                             &kp PG_UP      &none     &kp UP    &none      &none
+&CtrlAltDelete  &RegNumber  &kp TAB  &Pass  &kp ENTER                                 &kp PG_DN      &kp LEFT  &kp DOWN  &kp RIGHT  &none
+&none           &none       &none    &none  &none            &trans    &kp BACKSPACE  &kp ENTER                &mkp MB1  &none      &none
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -229,10 +229,10 @@
 
         SCROLL {
             bindings = <
-&kp LC(PG_UP)  &none           &kp UP    &none            &kp LC(PAGE_DOWN)                          &kp LC(PG_UP)  &none     &kp UP    &none      &kp LC(PG_DN)
-&none          &kp LEFT_ARROW  &mkp MB1  &kp RIGHT_ARROW  &kp PG_UP                                  &kp PG_UP      &kp LEFT  &mkp MB1  &kp RIGHT  &kp KP_MINUS
-&none          &none           &kp DOWN  &none            &kp PAGE_DOWN                              &kp PG_DN      &none     &kp DOWN  &none      &none
-&none          &none           &none     &none            &none              &none    &kp BACKSPACE  &kp ENTER                &none     &none      &trans
+&kp LC(PG_UP)  &none     &none     &none      &kp LC(PAGE_DOWN)                          &kp LC(PG_UP)  &none     &none     &none      &kp LC(PG_DN)
+&none          &none     &kp UP    &none      &kp PG_UP                                  &kp PG_UP      &none     &kp UP    &none      &none
+&none          &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN                              &kp PG_DN      &kp LEFT  &kp DOWN  &kp RIGHT  &none
+&none          &none     &mkp MB1  &none      &none              &none    &kp BACKSPACE  &kp ENTER                &mkp MB1  &none      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
