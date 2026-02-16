@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,
+            //スクロール方向を逆転,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -192,10 +192,10 @@
 
         Macro {
             bindings = <
-&kp F2          &kp F4      &none    &none  &none                            &trans  &trans  &trans  &trans  &trans
-&Address        &none       &none    &none  &kp LC(LS(M))                    &trans  &trans  &trans  &trans  &trans
-&CtrlAltDelete  &RegNumber  &kp TAB  &Pass  &kp ENTER                        &trans  &trans  &trans  &trans  &trans
-&none           &none       &none    &none  &none          &trans    &trans  &trans          &trans  &trans  &trans
+&kp F2          &kp F4      &none    &none  &kp PRINTSCREEN                    &trans  &trans  &trans  &trans  &trans
+&Address        &none       &none    &none  &kp LC(LS(M))                      &trans  &trans  &trans  &trans  &trans
+&CtrlAltDelete  &RegNumber  &kp TAB  &Pass  &kp ENTER                          &trans  &trans  &trans  &trans  &trans
+&none           &none       &none    &none  &none            &trans    &trans  &trans          &trans  &trans  &trans
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
